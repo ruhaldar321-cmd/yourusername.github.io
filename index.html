@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -10,74 +11,70 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
+    font-family:Segoe UI, sans-serif;
 }
 
 body{
-    font-family:'Segoe UI',sans-serif;
-    background:linear-gradient(
-        135deg,
-        #0f172a,
-        #1e3a8a,
-        #2563eb,
-        #38bdf8
-    );
-    background-size:400% 400%;
-    animation:gradient 15s ease infinite;
-    color:white;
+    background:url('background.jpg') center/cover fixed;
     min-height:100vh;
-    padding:20px;
+    color:white;
 }
 
-@keyframes gradient{
-    0%{background-position:0% 50%;}
-    50%{background-position:100% 50%;}
-    100%{background-position:0% 50%;}
-}
-
-.container{
-    max-width:1100px;
-    margin:auto;
+.overlay{
+    background:rgba(0,0,0,0.35);
+    min-height:100vh;
+    padding:30px;
 }
 
 .glass{
-    background:rgba(255,255,255,0.12);
-    backdrop-filter:blur(18px);
-    -webkit-backdrop-filter:blur(18px);
+    background:rgba(255,255,255,0.1);
+    backdrop-filter:blur(15px);
+    -webkit-backdrop-filter:blur(15px);
     border:1px solid rgba(255,255,255,0.2);
-    border-radius:25px;
-    box-shadow:0 8px 32px rgba(0,0,0,0.25);
-    padding:30px;
+    border-radius:20px;
+    box-shadow:0 8px 32px rgba(0,0,0,0.2);
+}
+
+header{
+    text-align:center;
+    padding:40px;
     margin-bottom:25px;
 }
 
-.hero{
-    text-align:center;
-}
-
-.hero img{
-    width:220px;
-    height:220px;
-    object-fit:cover;
+.profile{
+    width:180px;
+    height:180px;
     border-radius:50%;
-    border:5px solid rgba(255,255,255,0.4);
-    margin-bottom:20px;
+    object-fit:cover;
+    border:4px solid rgba(255,255,255,0.5);
 }
 
-.hero h1{
-    font-size:3rem;
+h1{
+    margin-top:15px;
+    font-size:42px;
 }
 
-.hero p{
-    font-size:1.2rem;
+.tagline{
     margin-top:10px;
+    font-size:20px;
+}
+
+section{
+    max-width:1000px;
+    margin:20px auto;
+    padding:30px;
 }
 
 h2{
     margin-bottom:15px;
 }
 
+p{
+    line-height:1.8;
+}
+
 ul{
-    padding-left:20px;
+    padding-left:25px;
 }
 
 li{
@@ -86,117 +83,193 @@ li{
 
 .skills{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
     gap:15px;
 }
 
 .skill{
-    background:rgba(255,255,255,0.1);
     padding:15px;
-    border-radius:15px;
     text-align:center;
+}
+
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+    padding:14px;
+    margin:10px 0;
+    border:none;
+    border-radius:12px;
+    background:rgba(255,255,255,0.15);
+    color:white;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder{
+    color:#ddd;
+}
+
+.contact-form button{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:12px;
+    cursor:pointer;
+    font-size:16px;
 }
 
 footer{
     text-align:center;
     padding:25px;
-    font-size:14px;
+    margin-top:30px;
+}
+
+@media(max-width:768px){
+    h1{
+        font-size:30px;
+    }
 }
 </style>
+
 </head>
 
 <body>
 
-<div class="container">
+<div class="overlay">
 
-    <div class="glass hero">
-        <img src="photo.jpg" alt="Ruhal Amin Dar">
+<header class="glass">
+    <img src="photo.jpg" class="profile" alt="Ruhal Amin Dar">
 
-        <h1>Ruhal Amin Dar</h1>
+```
+<h1>Ruhal Amin Dar</h1>
 
-        <p>
-            Student • Arduino Enthusiast • Young Programmer • Future Software Engineer
-        </p>
-    </div>
+<p class="tagline">
+    Student | Arduino Enthusiast | Future Software Engineer
+</p>
+```
 
-    <div class="glass">
-        <h2>About Me</h2>
+</header>
 
-        <p>
-            Hello! My name is Ruhal Amin Dar. I am a passionate student currently
-            studying at Saint Joseph's School, Baramulla. I have a strong interest
-            in technology, programming, Arduino development, robotics, web
-            development, artificial intelligence and innovation.
-        </p>
+<section class="glass">
+    <h2>About Me</h2>
 
-        <br>
+```
+<p>
+    My name is Ruhal Amin Dar. I am a student at Saint Joseph's School,
+    Baramulla, with a strong passion for technology, coding,
+    Arduino projects, innovation, and software development.
 
-        <p>
-            I enjoy learning new skills, creating projects and solving problems
-            using technology. My goal is to continue growing as a programmer and
-            pursue higher education abroad in the future.
-        </p>
-    </div>
+    I enjoy learning new technologies and building projects that solve
+    real-world problems. My goal is to pursue higher education abroad
+    and become a successful software engineer and innovator.
+</p>
+```
 
-    <div class="glass">
-        <h2>Personal Information</h2>
+</section>
 
-        <ul>
-            <li><strong>Name:</strong> Ruhal Amin Dar</li>
-            <li><strong>School:</strong> Saint Joseph's School, Baramulla</li>
-            <li><strong>Born:</strong> May 2010</li>
-            <li><strong>Email:</strong> ruhaldar321@gmail.com</li>
-            <li><strong>Goal:</strong> Study Abroad & Become a Software Engineer</li>
-        </ul>
-    </div>
+<section class="glass">
+    <h2>Personal Information</h2>
 
-    <div class="glass">
-        <h2>Achievements</h2>
+```
+<ul>
+    <li><strong>Name:</strong> Ruhal Amin Dar</li>
+    <li><strong>School:</strong> Saint Joseph's School, Baramulla</li>
+    <li><strong>Born:</strong> May 2010</li>
+    <li><strong>Email:</strong> ruhaldar321@gmail.com</li>
+    <li><strong>Goal:</strong> Study Abroad & Build Innovative Technology</li>
+</ul>
+```
 
-        <ul>
-            <li>🏅 Won 4 Gold Medals in Arduino Coding Competitions.</li>
-            <li>📜 Earned 8 Virtual Certificates in Project Making.</li>
-            <li>💻 Worked on various coding and technology projects.</li>
-            <li>🚀 Passionate about innovation and problem solving.</li>
-            <li>🌟 Active learner in programming and electronics.</li>
-        </ul>
-    </div>
+</section>
 
-    <div class="glass">
-        <h2>Skills</h2>
+<section class="glass">
+    <h2>Achievements</h2>
 
-        <div class="skills">
-            <div class="skill">Arduino Programming</div>
-            <div class="skill">Web Development</div>
-            <div class="skill">HTML & CSS</div>
-            <div class="skill">Problem Solving</div>
-            <div class="skill">Project Building</div>
-            <div class="skill">Electronics</div>
-            <div class="skill">Innovation</div>
-            <div class="skill">Technology Research</div>
-        </div>
-    </div>
+```
+<ul>
+    <li>🏅 4 Gold Medals in Arduino Coding Competitions</li>
+    <li>📜 8 Virtual Certificates in Project Making</li>
+    <li>💻 Multiple Coding and Electronics Projects</li>
+    <li>🚀 Passionate About Innovation and Technology</li>
+    <li>📚 Continuous Learner of Programming Concepts</li>
+</ul>
+```
 
-    <div class="glass">
-        <h2>Future Vision</h2>
+</section>
 
-        <p>
-            My vision is to become a highly skilled software engineer and
-            technology innovator. I plan to pursue advanced education abroad,
-            learn cutting-edge technologies, and create impactful solutions that
-            help people around the world.
-        </p>
-    </div>
+<section class="glass">
+    <h2>Skills</h2>
 
-    <div class="glass">
-        <h2>Contact</h2>
+```
+<div class="skills">
 
-        <p>📧 ruhaldar321@gmail.com</p>
-    </div>
+    <div class="glass skill">Arduino Programming</div>
 
-    <footer>
-        © 2026 Ruhal Amin Dar | Student Portfolio
-    </footer>
+    <div class="glass skill">Web Development</div>
+
+    <div class="glass skill">Problem Solving</div>
+
+    <div class="glass skill">Project Making</div>
+
+    <div class="glass skill">Innovation</div>
+
+    <div class="glass skill">Technology Research</div>
+
+</div>
+```
+
+</section>
+
+<section class="glass">
+    <h2>Future Vision</h2>
+
+```
+<p>
+    I believe technology can change the world. My dream is to continue
+    improving my programming and engineering skills, study at an
+    internationally recognized institution, and contribute to innovative
+    software and technology solutions that positively impact society.
+</p>
+```
+
+</section>
+
+<section class="glass contact-form">
+    <h2>Contact Me</h2>
+
+```
+<form action="https://formsubmit.co/ruhaldar321@gmail.com" method="POST">
+
+    <input type="hidden"
+           name="_subject"
+           value="New Message From Ruhal's Portfolio">
+
+    <input type="text"
+           name="name"
+           placeholder="Your Name"
+           required>
+
+    <input type="email"
+           name="email"
+           placeholder="Your Email"
+           required>
+
+    <textarea name="message"
+              rows="6"
+              placeholder="Write your message here..."
+              required></textarea>
+
+    <button type="submit">Send Message 🚀</button>
+
+</form>
+```
+
+</section>
+
+<footer class="glass">
+    <h2>Ruhal Amin Dar</h2>
+    <p>Student • Innovator • Future Software Engineer</p>
+    <p>© 2026 All Rights Reserved</p>
+</footer>
 
 </div>
 
